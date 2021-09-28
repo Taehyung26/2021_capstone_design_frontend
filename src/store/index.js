@@ -171,7 +171,7 @@ export default new Vuex.Store({
       longitude = this.state.currentLocation.longitude
     }
     axios
-      .get("http://20.194.30.72:8000/parkmoa", {
+      .get("https://20.194.30.72:8000/parkmoa", {
         params: {
           search: inputText,
           latitude,
