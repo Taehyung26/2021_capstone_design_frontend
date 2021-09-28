@@ -131,7 +131,7 @@ export default new Vuex.Store({
   },
 
   actions: {
-    getLocation({commit, dispatch}, inputText) {
+    getLocation({commit}) {
       console.log(router.currentRoute.name)
       //do we support geolocation
       if(!("geolocation" in navigator)) {
@@ -153,9 +153,6 @@ export default new Vuex.Store({
         console.log('Error message ', err);
         console.log('latitude ', 37.566361 , ', longitude ' , 126.977944);
       })
-      if (router.currentRoute.name === "Search"){
-          dispatch("getinfo", inputText)
-      }
   },
 
   getinfo({ commit }, inputText) {
@@ -171,7 +168,7 @@ export default new Vuex.Store({
       longitude = this.state.currentLocation.longitude
     }
     axios
-      .get("http://20.194.30.72:8000/parkmoa", {
+      .get("https://20.194.30.72:8000/parkmoa", {
         params: {
           search: inputText,
           latitude,
