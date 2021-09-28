@@ -132,7 +132,6 @@ export default new Vuex.Store({
 
   actions: {
     getLocation({commit}) {
-      console.log(router.currentRoute.name)
       //do we support geolocation
       if(!("geolocation" in navigator)) {
         commit("setError", true)
