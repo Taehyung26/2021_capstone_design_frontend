@@ -168,9 +168,6 @@ export default new Vuex.Store({
     }
     axios
       .get("https://20.194.30.72:8000/parkmoa", {
-        headers: {
-          'Access-Control-Allow-Origin': '*'
-        },
         params: {
           search: inputText,
           latitude,
