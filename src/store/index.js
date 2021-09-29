@@ -167,7 +167,7 @@ export default new Vuex.Store({
       longitude = this.state.currentLocation.longitude
     }
     axios
-      .get("https://20.194.30.72/parkmoa", {
+      .get("https://20.194.30.72:8000/parkmoa", {
         headers: {
           'Access-Control-Allow-Origin': '*'
         },
